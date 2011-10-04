@@ -1,2 +1,4 @@
 class Client < ActiveRecord::Base
-end
+  belongs_to :user
+  validates :content, :length => { :maximum => 100 }
+end  
